@@ -84,8 +84,8 @@ var Trigger = function (_Component) {
                 clearTimeout(this.triggerTimmer);
             }
             this.triggerTimmer = setTimeout(function () {
-                if (typeof _this3.props.onTouchTap === 'function') {
-                    _this3.props.onTouchTap(e);
+                if (typeof _this3.props.onClick === 'function') {
+                    _this3.props.onClick(e);
                 }
                 _this3.triggerTimmer = null;
             });
@@ -95,11 +95,11 @@ var Trigger = function (_Component) {
         value: function render() {
             var _props = this.props;
             var children = _props.children;
-            var onTouchTap = _props.onTouchTap;
+            var onClick = _props.onClick;
 
-            var others = _objectWithoutProperties(_props, ['children', 'onTouchTap']);
+            var others = _objectWithoutProperties(_props, ['children', 'onClick']);
 
-            others.onTouchTap = this.handleClick;
+            others.onClick = this.handleClick;
 
             if (typeof children === 'string') {
                 return _react2.default.createElement(
@@ -119,7 +119,7 @@ var Trigger = function (_Component) {
 
 Trigger.propTypes = {
     onOuterClick: _react.PropTypes.func,
-    onTouchTap: _react.PropTypes.func,
+    onClick: _react.PropTypes.func,
     bindOuterClick: _react.PropTypes.bool // 是否绑定元素外点击事件
 };
 
