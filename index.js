@@ -123,9 +123,5 @@ Trigger.propTypes = {
     bindOuterClick: _react.PropTypes.bool // 是否绑定元素外点击事件
 };
 
-Trigger.defaultProps = {
-    bindOuterClick: false
-};
-
 exports.default = Trigger;
 module.exports = exports['default'];
