@@ -97,7 +97,7 @@ var Trigger = function (_Component) {
             var children = _props.children;
             var onClick = _props.onClick;
 
-            var others = _objectWithoutProperties(_props, ['children', 'onClick']);
+            var others = _objectWithoutProperties(_props, ['children', 'onClick', 'bindOuterClick', 'onOuterClick']);
 
             others.onClick = this.handleClick;
 
